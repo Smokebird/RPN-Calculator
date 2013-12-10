@@ -1,0 +1,25 @@
+What do we need? 
+
+stack class-> stack.h stack.cpp 
+
+operand buttons-> operandbutton.h operandButton.cpp
+
+operator button, binay and unary. *.h *.cpp (inherit from these)
+
+operand
+
+display box (fltk box)
+
+need to work with floating point numbers. 
+
+
+
+32-   = 3 - 2 
+
+
+
+John Doorenbos -> 641 - 888 -0162
+Emily Platts -> 651 - 380 - 1044    01
+Cuyler Vander Werker -> 218 - 251 -5315  02 
+ 
+
