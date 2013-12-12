@@ -14,6 +14,7 @@ private:
   Stack *stack;
 
 
+
 public:
  operatorButton(int X, intY, int W, int H, char* label, *Stack stack) : Fl_Button(X,Y,W,H,label){
     this->stack stack;
