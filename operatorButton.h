@@ -12,7 +12,8 @@
 class operatorButton : public Fl_Button {
 private:
   Stack *stack;
-
+  float op1;
+  float op2;
 
 
 public:
