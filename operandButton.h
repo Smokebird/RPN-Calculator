@@ -14,7 +14,7 @@ public:
     this->stack = stack;  
     this->id = ATOI(label)
   }
-  
+  static void opCB(Fl_Widget, void);
   
 
   
