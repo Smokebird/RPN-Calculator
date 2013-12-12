@@ -12,7 +12,7 @@ DEBUG    = -g
 CXXFLAGS = $(shell fltk-config --cxxflags ) -std=c++11 -I. # -I include from dirs
 LDFLAGS  = $(shell fltk-config --ldflags )
 LDSTATIC = $(shell fltk-config --ldstaticflags )
-OBJS = stack.o #utils.o
+OBJS = operandButton.o stack.o #utils.o
 FLTK = -lfltk
 
 
