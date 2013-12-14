@@ -23,5 +23,7 @@ need to work with floating point numbers.
 John Doorenbos -> 641 - 888 -0162
 Emily Platts -> 651 - 380 - 1044    01
 Cuyler Vander Werker -> 218 - 251 -5315  02 
- 
+
+
+right now when you press a numberbutton, it puts it right on the stack, now allowing for two digit numbers. so, I think that a static char* should be added to the operandButton, and then when you click on the number, it will add the number character to the statjic char star. A press of an enter button would allow you to access the static variable and then add it to the stack.  
 
