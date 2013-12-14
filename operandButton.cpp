@@ -1,9 +1,8 @@
-#include"operatorButton.h"
+#include"operandButton.h"
 #include"stack.h"
 
 using namespace std;
+/*
+void opCB(Fl_Widget *w, void *){
+*/
 
-static void opCB(Fl_Widget *w, void *){
-  operatorButton *myButton = (operatorButton *)w;
-  myButton->stack->push(myButton->id);
-}
