@@ -8,7 +8,7 @@
 #include<FL/Fl_Button.H>
 
 //#include"operandButton.h"
-//#include"operatorButton.h"
+#include"operatorButton.h"
 
 
 using namespace std;
