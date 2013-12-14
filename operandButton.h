@@ -2,9 +2,8 @@
 #define OPERANDBUTTON
 
 
+
 #include<FL/Fl_Button.H>
-
-
 
 #include"utils.h"
 #include"stack.h"

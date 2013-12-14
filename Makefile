@@ -9,7 +9,7 @@ else
 endif
 
 DEBUG    = -g
-CXXFLAGS = $(shell fltk-config --cxxflags ) -std=c++11 -I. # -I include from dirs
+CXXFLAGS = $(shell fltk-config --cxxflags ) -std=c++0x -I. # -I include from dirs
 LDFLAGS  = $(shell fltk-config --ldflags )
 LDSTATIC = $(shell fltk-config --ldstaticflags )
 
