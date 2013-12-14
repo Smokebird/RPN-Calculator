@@ -13,6 +13,7 @@ class OperandButton : public Fl_Button {
 private:
   
 public:
+  
   Stack *stack;
   float id;
   
@@ -23,12 +24,16 @@ public:
     this->id = temp;
     
   }
+  
+  
+  
   static void opCB(Fl_Widget* w, void*){
+    static vector<float> num;
     OperandButton *myButton = (OperandButton *)w;
-    OperandButton::num.push_back(myButton->id);  
+    num.push_back(myButton->id);  
     //myButton->stack->push(myButton->id);
   }
-  static vector<float> num;
+  
 
   
   };
