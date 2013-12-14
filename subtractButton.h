@@ -16,14 +16,14 @@ class SubtractButton : public Fl_Button {
   float op1;
   float op2;
 
- SubtractButton(int X, int Y, int W, int H, char* label, Stack *stack) : fl_Button(X,Y,W,H,label){
+ SubtractButton(int X, int Y, int W, int H, char* label, Stack *stack) : Fl_Button(X,Y,W,H,label){
     this->stack =stack;
 
   }
 
 
-void sbCB(fl_Widget * w, void*){
-  OperandButton *myButton = (OperandButton *)w;
+void sbCB(Fl_Widget * w, void*){
+  SubtractButton *myButton = (SubtractButton *)w;
   myButton->stack->push(myButton->id);
 }
 };

@@ -9,8 +9,8 @@
 
 #include"subtractButton.h"
 
-#include "plusButton.h"
-
+#include "plus.h"
+//1 2 3 4 5 6
 
 
 // hi ther
