@@ -22,7 +22,9 @@ ALL = rpnTester
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(DEBUG) -c $<
 rpnTester:	rpnTester.cpp $(OBJS)
-	$(CXX) $(CXXFLAGS) rpnTester.cpp $(FLTK) $(OBJS) -o rpnTester
+
+	$(CXX) $(CXXFLAGS) rpnTester.cpp $(FLTK) $(LDFLAGS) $(OBJS) -o rpnTester
+
 
 
 

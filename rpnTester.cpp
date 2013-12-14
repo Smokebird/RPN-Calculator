@@ -15,6 +15,7 @@ void exitcb(Fl_Widget *, void *) {
 
 using namespace std;
 
+
 int main(int argc, char *argv[]){
   //Fl_Window *window=new Fl_Window(600,600, "Hello");
   Stack *stack = new Stack();
