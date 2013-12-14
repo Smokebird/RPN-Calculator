@@ -6,7 +6,11 @@
 #include<FL/Fl_Window.H>
 #include<FL/Fl_Box.H>
 #include<FL/Fl_Button.H>
+
 #include"subtractButton.h"
+
+#include "plusButton.h"
+
 
 
 // hi ther
