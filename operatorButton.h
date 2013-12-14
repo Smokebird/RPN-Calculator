@@ -3,7 +3,7 @@
 #ifndef OPERATORBUTTON
 #define OPERATORBUTTON
 
-#include <FL/Fl_Button>
+#include <FL/Fl_Button.H>
 #include "utils.h"
 #include "stack.h"
 #include <iostream>
@@ -17,8 +17,8 @@ private:
 
 
 public:
- operatorButton(int X, intY, int W, int H, char* label, *Stack stack) : Fl_Button(X,Y,W,H,label){
-    this->stack stack;
+ operatorButton(int X, int Y, int W, int H, char* label, Stack* stack) : Fl_Button(X,Y,W,H,label){
+    this->stack =stack;
   }
 };
 
