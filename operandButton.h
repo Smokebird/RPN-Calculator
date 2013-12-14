@@ -1,7 +1,7 @@
 #ifndef OPERANDBUTTON
 #define OPERANDBUTTON
 
-#include<FL/FL_Button.H>
+#include<FL/Fl_Button.H>
 #include"utils.h"
 #include"stack.h"
 #include<cstdlib>
