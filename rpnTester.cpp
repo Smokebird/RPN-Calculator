@@ -14,10 +14,10 @@
 
 #include"operandButton.h"
 #include"enterButton.h"
-//#include"operatorButton.h"
+												       //#include"operatorButton.h"
 void exitcb(Fl_Widget *, void *) {
   exit(0);
-}
+   }
 
 
 using namespace std;
@@ -46,9 +46,11 @@ int main(int argc, char *argv[]){
   Fl_Button *b3 = new Fl_Button(220,20, 80, 25, "E&xit");
   b3->callback(exitcb,0);
   
+  SubtractButton *b4 = new SubtractButton( 300,200, 30,30,"-", stack, numLst);
+  b4->callback(b4->sbCB,0);
+  
   window->end();
   window->end();
   window->show(argc, argv);
   return Fl::run();
 }
-// argv can not be consint
