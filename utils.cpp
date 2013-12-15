@@ -37,7 +37,14 @@ using namespace std;
 
 
 
-
+/*
+float from_string(std::string const & s) {
+  std::stringstream ss(s);
+  float result;
+  ss >> result;    // TODO handle errors
+  return result;
+}
+*/
 //A base ten string to int converter
 bool STOI(const std::string& str, int& result) //takes int reference and changes that int,
 {                                              // rather than returning an integer.
