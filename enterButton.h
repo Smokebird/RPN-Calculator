@@ -43,7 +43,7 @@ public:
     EnterButton *myButton = (EnterButton *)w;
     float number = 0;
     number = myButton->from_string(*myButton->myStr);
-    cout <<"The number you pushed on the stack was : " << number << endl;
+    
     myButton->stack->push(number);    
     
     (*myButton->myStr) = "";
