@@ -9,10 +9,10 @@
 #include <iostream>
 
 
-class plusButton : publlic Fl_Button {
+class plusButton : public Fl_Button {
  private:
   Stack *stack;
-
+  float id;
  public:
 
  plusButton(int X, int Y, int W, int H, char* label, Stack *stack) : Fl_Button(X,Y,W,H, label){

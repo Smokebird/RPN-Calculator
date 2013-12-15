@@ -1,7 +1,10 @@
 #ifndef OPERANDBUTTON
 #define OPERANDBUTTON
 
+
+
 #include<FL/Fl_Button.H>
+
 #include"utils.h"
 #include"stack.h"
 #include<cstdlib>
@@ -18,6 +21,7 @@ private:
 public:
   
   Stack *stack;
+
   string id;
   string *myStr;
 
@@ -26,10 +30,12 @@ public:
     this->myStr = numLst;
     //int temp = std::atoi(label);
     this->id = label;
+
     
   }
-  
-  
+
+
+
   
   static void opCB(Fl_Widget* w, void*){
     OperandButton *myButton = (OperandButton *)w;
@@ -38,8 +44,12 @@ public:
     //myButton->stack->push(myButton->id);
 
 
+
   }
+
   
+  
+
 
   
   };

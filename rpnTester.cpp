@@ -7,12 +7,18 @@
 #include<FL/Fl_Box.H>
 #include<FL/Fl_Button.H>
 #include"plusButton.h"
+
+#include"subtractButton.h"
+
+#include "plus.h"
+
 #include"operandButton.h"
 #include"enterButton.h"
 //#include"operatorButton.h"
 void exitcb(Fl_Widget *, void *) {
   exit(0);
 }
+
 
 using namespace std;
 

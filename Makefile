@@ -15,6 +15,7 @@ LDSTATIC = $(shell fltk-config --ldstaticflags )
 OBJS =   stack.o operandButton.o #utils.o put operandButton.o back in
 HEADER = operatorButton.h operandButton.h enterButton.h
 
+
 FLTK = -lfltk
 
 
@@ -23,9 +24,13 @@ ALL = rpnTester
 .SUFFIXES: .o .cpp
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(DEBUG) -c $<
+
 rpnTester:	rpnTester.cpp $(OBJS) $(HEADER)
 
-	$(CXX) $(CXXFLAGS) rpnTester.cpp $(FLTK) $(LDFLAGS) $(OBJS) -o rpnTester
+
+
+
+	$(CXX) $(CXXFLAGS) rpnTester.cpp $(FLTK) $(LDFLAGS) $(OBJS)  -o rpnTester
 
 
 
