@@ -7,20 +7,40 @@
 #include "utils.h"
 #include "stack.h"
 #include <iostream>
-
+#include <cstdlib>
+#include <string>
+#include <sstream>
+using namespace std;
 
 class plusButton : public Fl_Button {
- private:
-  Stack *stack;
-  float id;
- public:
 
- plusButton(int X, int Y, int W, int H, char* label, Stack *stack) : Fl_Button(X,Y,W,H, label){
-    this->stack = stack;
+ public:
+  float from_string(const std::string &s) {
+    stringstream ss(s);
+    float result;
+    ss >> result;
+    return result;
   }
+  string *myStr;
+  Stack *stack;
+  
+
+
+ plusButton(int X, int Y, int W, int H, char* label, Stack *stack, string* str) : Fl_Button(X,Y,W,H, label){
+    this->stack = stack;
+    this->myStr = str;
+  }
+
+
   static void plCB(Fl_Widget* p, void*){
+    float op1;
+    float op2;
+    float res = (op1 + op2);
     plusButton *myButton = (plusButton *)p;
-    myButton->stack->push(myButton->id);
+    op2 = myButton->from_string(*myButton->myStr);
+    op1 = myButton->stack->pop();
+    myButton->stack->push(res);
+    cout << "The number you pushed on the stack was : " << res << endl;
   }
 };
 
