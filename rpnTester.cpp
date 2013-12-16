@@ -11,7 +11,7 @@
 #include"subtractButton.h"
 
 #include "plus.h"
-
+#include "multiply.h"
 #include"operandButton.h"
 #include"enterButton.h"
 												       //#include"operatorButton.h"
@@ -52,6 +52,9 @@ int main(int argc, char *argv[]){
   plusButton *b5 = new plusButton (400, 60, 30, 30, "+", stack, numLst);
   b5->callback(b5->plCB, 0);
   
+  multiplyButton *b6 = new multiplyButton (500, 70, 30, 30, "X", stack, numLst);
+  b6->callback(b6->muCB, 0);
+
   window->end();
   window->end();
   window->show(argc, argv);

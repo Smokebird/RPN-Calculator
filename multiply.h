@@ -7,21 +7,42 @@
 #include "utils.h"
 #include "stack.h"
 #include <iostream>
+#include <cstdlib>
+#include <string>
+#include <sstream>
+using namespace std;
 
 class multiplyButton : public Fl_Button {
- private:
-  Stack *stack;
 
  public:
-
- multiplyButton(int X, int Y, int W, int H, char* label, Stack *stack) : Fl_Button(X,Y,W,H, label){
-    this->stack = stack;
+  float from_string(const std::string &s) {
+    stringstream ss(s);
+    float result;
+    ss >> result;
+    return result;
   }
+  string *myStr;
+  Stack *stack;
+
+
+
+ multiplyButton(int X, int Y, int W, int H, char* label, Stack *stack, string* str) : Fl_Button(X,Y,W,H, label){
+    this->stack = stack;
+    this->myStr = str;
+  }
+
+
   static void muCB(Fl_Widget* m, void*){
-
+    float op1;
+    float op2;
+    float res = (op1*op2);
     multiplyButton *myButton = (multiplyButton *)m;
-    myButton->stack->push)myButton->id);
+    op2 = myButton->from_string(*myButton->myStr);
+    op1 = myButton->stack->pop();
 
-   }
+    myButton->stack->push(res);
+    cout << "The number you pushed on the stack was : " << res << endl;
+  }
+
 };
 #endif
