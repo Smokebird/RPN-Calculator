@@ -48,6 +48,9 @@ int main(int argc, char *argv[]){
   
   SubtractButton *b4 = new SubtractButton( 300,200, 30,30,"-", stack, numLst);
   b4->callback(b4->sbCB,0);
+
+  plusButton *b5 = new plusButton (400, 60, 30, 30, "+", stack, numLst);
+  b5->callback(b5->plCB, 0);
   
   window->end();
   window->end();
