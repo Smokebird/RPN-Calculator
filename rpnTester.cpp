@@ -10,6 +10,7 @@
 
 #include"subtractButton.h"
 
+#include "divide.h"
 #include "plus.h"
 #include "multiply.h"
 #include"operandButton.h"
@@ -54,6 +55,9 @@ int main(int argc, char *argv[]){
   
   multiplyButton *b6 = new multiplyButton (500, 70, 30, 30, "X", stack, numLst);
   b6->callback(b6->muCB, 0);
+
+  divideButton *b7 = new divideButton ( 450, 70, 30, 30, "/", stack, numLst);
+  b7->callback(b7->diCB, 0);
 
   window->end();
   window->end();
