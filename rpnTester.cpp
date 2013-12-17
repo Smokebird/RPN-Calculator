@@ -76,6 +76,7 @@ int main(int argc, char *argv[]){
 
 
   EnterButton *b2 = new EnterButton(370, 300, 80,80 ,"Enter", stack, numLst);
+     b2->callback(b2->enterCB, 0);
   /*
 =======
 
