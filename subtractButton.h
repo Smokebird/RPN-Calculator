@@ -33,9 +33,16 @@ class SubtractButton : public Fl_Button {
     float op1;
     float op2;
     SubtractButton *myButton = (SubtractButton *)w;
-    op2 =  myButton->from_string(*myButton->myStr);
+    
+    float number =  myButton->from_string(*myButton->myStr);
+    zmyButton->stack->push(number);    
+
+    op2 = myButton->stack->pop();
     op1 = myButton->stack->pop();
-    myButton->stack->push(op1-op2);
+    
+    
+    myButton->stack->push(op1-op2);    
+
     cout <<"The number you pushed on the stack was : " << op1-op2 << endl;
   }
 };

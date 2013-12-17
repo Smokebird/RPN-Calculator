@@ -8,7 +8,8 @@ Stack::Stack(){
 } 
 
 void Stack::push(float x){
-  stack->insert(stack->begin(),x);
+  stack->push_back(x);//insert(stack->begin(),x);
+  
 }
 
 float Stack::pop(){
