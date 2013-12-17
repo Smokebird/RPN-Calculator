@@ -1,43 +1,43 @@
+//header file for square root button
 
-//header file for plus button
+#ifndef EXPONENT
+#define EXPONENT
 
-#ifndef PLUSBUTTON
-#define PLUSBUTTON
-
-#include<Fl/Fl_Button.H>
+#include <Fl/Fl_Button.H>
 #include "utils.h"
 #include "stack.h"
 #include <iostream>
 #include <cstdlib>
 #include <string>
 #include <sstream>
+#include <math.h>
 using namespace std;
 
-class PlusButton : public Fl_Button {
+class ExpoButton : public Fl_Button {
 
- public:
-  float from_string(const std::string &s) {
+   public:
+   float from_string(const std::string &s) {
     stringstream ss(s);
     float result;
     ss >> result;
     return result;
   }
-  string *myStr;
-  Stack *stack;
   
+   string *myStr;
+  Stack *stack;
 
 
- PlusButton(int X, int Y, int W, int H, char* label, Stack *stack, string* str) : Fl_Button(X,Y,W,H, label){
+
+ ExpoButton(int X, int Y, int W, int H, char* label, Stack *stack, string* str) : Fl_Button(X,Y,W,H, label){
     this->stack = stack;
     this->myStr = str;
   }
-
-
-  static void plCB(Fl_Widget* p, void*){
+  
+  static void exCB(Fl_Widget* s, void*){
     float op1;
     float op2;
-    
-    PlusButton *myButton = (PlusButton *)p;
+    ExpoButton *myButton = (ExpoButton *)s;
+
     if(!(*myButton->myStr).compare("") == 0){
       cout << "Empty String" << endl;
       float number = myButton->from_string(*myButton->myStr);
@@ -45,11 +45,15 @@ class PlusButton : public Fl_Button {
     }
 
 
+
     op2 = myButton->stack->pop();
     op1 = myButton->stack->pop();
-    cout << op1 << " + " << op2 << endl;
+    cout << op1 << " expo "<< op2 << endl;
 
-    float res = (op1 + op2);
+    //TODO: modify line below to sqrt. It is currently addition.
+    
+    float res =pow(op1,op2);
+    
     myButton->stack->push(res);
     cout << "The number you pushed on the stack was : " << res << endl;
     (*myButton->myStr) = "";
