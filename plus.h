@@ -47,7 +47,7 @@ class PlusButton : public Fl_Button {
 
     op2 = myButton->stack->pop();
     op1 = myButton->stack->pop();
-    cout << op1 << " - " << op2 << endl;
+    cout << op1 << " + " << op2 << endl;
 
     float res = (op1 + op2);
     myButton->stack->push(res);

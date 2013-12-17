@@ -13,7 +13,7 @@ CXXFLAGS = $(shell fltk-config --cxxflags ) -std=c++0x -I. # -I include from dir
 LDFLAGS  = $(shell fltk-config --ldflags )
 LDSTATIC = $(shell fltk-config --ldstaticflags )
 OBJS =   stack.o operandButton.o #utils.o put operandButton.o back in
-HEADER = operatorButton.h operandButton.h enterButton.h
+HEADER = operatorButton.h operandButton.h enterButton.h subtractButton.h plus.h divide.h multiply.h
 
 
 FLTK = -lfltk
