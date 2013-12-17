@@ -32,7 +32,7 @@ class sqrtButton : public Fl_Button {
   }
   
   static void sqCB(Fl_Widget* s, void*){
-    flaot op1;
+    float op1;
     float op2;
 
     sqrtButton *myButton = (sqrtButton *)s;

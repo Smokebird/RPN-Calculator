@@ -9,7 +9,7 @@
 
 
 #include"subtractButton.h"
-
+#include "sqrRoot.h"
 #include "divide.h"
 #include "plus.h"
 #include "multiply.h"
@@ -74,7 +74,6 @@ int main(int argc, char *argv[]){
   
   
 
-
   EnterButton *b2 = new EnterButton(370, 300, 80,80 ,"Enter", stack, numLst);
   /*
 =======
@@ -128,19 +127,10 @@ int main(int argc, char *argv[]){
   b6->callback(b6->muCB, 0);
 
   divideButton *b7 = new divideButton ( 460, 120, 80, 80, "/", stack, numLst);
-  /*=======
-  SubtractButton *b4 = new SubtractButton( 295,230, 80,80,"-", stack, numLst);
-  b4->callback(b4->sbCB,0);
+  b7->callback(b7->diCB, 0);
 
-  plusButton *b5 = new plusButton (295, 320, 80, 80, "+", stack, numLst);
-  b5->callback(b5->plCB, 0);
-  
-  multiplyButton *b6 = new multiplyButton (205, 140, 80, 80, "X", stack, numLst);
-  b6->callback(b6->muCB, 0);
-
-  divideButton *b7 = new divideButton ( 115, 140, 80, 80, "/", stack, numLst);
->>>>>>> 0ddbf5cdb363067980233bc310911ce8caaf1412
-  */b7->callback(b7->diCB, 0);
+  sqrtButton *b8 = new sqrtButton (460,260,80,80,"sqrt", stack,numLst);
+  b8->callback(b8->sqCB, 0);
 
   window->end();
   window->end();
