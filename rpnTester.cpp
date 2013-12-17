@@ -6,6 +6,7 @@
 #include<FL/Fl_Window.H>
 #include<FL/Fl_Box.H>
 #include<FL/Fl_Button.H>
+#include"displayBox.h"
 
 
 #include"subtractButton.h"
@@ -26,17 +27,19 @@ using namespace std;
 
 int main(int argc, char *argv[]){
   //Fl_Window *window=new Fl_Window(600,600, "Hello");
-  Stack *stack = new Stack();
+Fl_Window *window = new Fl_Window(600, 600);
+  DisplayBox *db = new DisplayBox(20,20,120,80,"0");
+  Stack *stack = new Stack(db);
   string*numLst = new string;
   
   //  
-  Fl_Window *window = new Fl_Window(600, 600);
+  
 
-  Fl_Box *box = new Fl_Box(20,40,200,80,"I work");
-  box->box(FL_UP_BOX);
-  box->labelfont(FL_BOLD+FL_ITALIC);
-  box->labelsize(36);
-  box->labeltype(FL_SHADOW_LABEL);
+  //Fl_Box *box = new Fl_Box(20,40,200,80,"I work");
+  //  box->box(FL_UP_BOX);
+  // box->labelfont(FL_BOLD+FL_ITALIC);
+  // box->labelsize(36);
+  // box->labeltype(FL_SHADOW_LABEL);
   //<<<<<<< HEAD
    
   //The following code makes each of the operand buttons. A for loop would absolutely work better, unfortunately, as I was working it out it would have required type conversions which are a huge pain in the butt with this compiler.
@@ -75,12 +78,14 @@ int main(int argc, char *argv[]){
   
 
 
+
   EnterButton *b2 = new EnterButton(370, 300, 80,80 ,"Enter", stack, numLst);
      b2->callback(b2->enterCB, 0);
   /*
 =======
 
-  OperandButton *b8 = new OperandButton(25,500,80,80, "0", stack, numLst);
+  OperandButton *b8 = new OperandButton(25,500,80,80, "0", st
+ack, numLst);
   b8->callback(b8->opCB,0);
   
   OperandButton *b9 = new OperandButton(25,410,80,80, "1", stack, numLst);
@@ -112,9 +117,8 @@ int main(int argc, char *argv[]){
 
   EnterButton *b2 = new EnterButton(295,410 , 80,170 ,"Enter", stack, numLst);
   >>>>>>> 0ddbf5cdb363067980233bc310911ce8caaf1412
-  */
   b2->callback(b2->enterCB, 0);
-
+*/
   Fl_Button *b3 = new Fl_Button(460,300, 80, 25, "E&xit");
   b3->callback(exitcb,0);
   
