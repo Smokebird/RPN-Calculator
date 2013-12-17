@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
   Stack *stack = new Stack();
   string*numLst = new string;
   
-  
+  //  
   Fl_Window *window = new Fl_Window(600, 600);
 
   Fl_Box *box = new Fl_Box(20,40,260,100,"I work");
@@ -37,26 +37,53 @@ int main(int argc, char *argv[]){
   box->labelfont(FL_BOLD+FL_ITALIC);
   box->labelsize(36);
   box->labeltype(FL_SHADOW_LABEL);
+
+  OperandButton *b8 = new OperandButton(25,500,80,80, "0", stack, numLst);
+  b8->callback(b8->opCB,0);
   
-  OperandButton *b1 = new OperandButton(100, 100, 80, 80, "9", stack, numLst);
+  OperandButton *b9 = new OperandButton(25,410,80,80, "1", stack, numLst);
+  b9->callback(b9->opCB,0);
+
+  OperandButton *b10 = new OperandButton(25,320,80,80, "4", stack, numLst);
+  b10->callback(b10->opCB,0);
+
+  OperandButton *b11 = new OperandButton(25,230,80,80, "7", stack, numLst);
+  b11->callback(b11->opCB,0);
+
+  OperandButton *b12 = new OperandButton(115,410,80,80, "2", stack, numLst);
+  b12->callback(b12->opCB,0);
+
+  OperandButton *b13 = new OperandButton(115,320,80,80, "5", stack, numLst);
+  b13->callback(b13->opCB,0);
+
+  OperandButton *b14 = new OperandButton(115,230,80,80, "8", stack, numLst);
+  b14->callback(b14->opCB,0);
+
+  OperandButton *b15 = new OperandButton(205,410,80,80, "3", stack, numLst);
+  b15->callback(b15->opCB,0);
+
+  OperandButton *b16 = new OperandButton(205,320,80,80, "6", stack, numLst);
+  b16->callback(b16->opCB,0);
+
+  OperandButton *b1 = new OperandButton(205, 230, 80, 80, "9", stack, numLst);
   b1->callback(b1->opCB,0);
 
-  EnterButton *b2 = new EnterButton(300, 300, 80,80 ,"Enter", stack, numLst);
+  EnterButton *b2 = new EnterButton(295,410 , 80,170 ,"Enter", stack, numLst);
   b2->callback(b2->enterCB, 0);
 
   Fl_Button *b3 = new Fl_Button(220,20, 80, 25, "E&xit");
   b3->callback(exitcb,0);
   
-  SubtractButton *b4 = new SubtractButton( 300,200, 30,30,"-", stack, numLst);
+  SubtractButton *b4 = new SubtractButton( 295,230, 80,80,"-", stack, numLst);
   b4->callback(b4->sbCB,0);
 
-  plusButton *b5 = new plusButton (400, 60, 30, 30, "+", stack, numLst);
+  plusButton *b5 = new plusButton (295, 320, 80, 80, "+", stack, numLst);
   b5->callback(b5->plCB, 0);
   
-  multiplyButton *b6 = new multiplyButton (500, 70, 30, 30, "X", stack, numLst);
+  multiplyButton *b6 = new multiplyButton (205, 140, 80, 80, "X", stack, numLst);
   b6->callback(b6->muCB, 0);
 
-  divideButton *b7 = new divideButton ( 450, 70, 30, 30, "/", stack, numLst);
+  divideButton *b7 = new divideButton ( 115, 140, 80, 80, "/", stack, numLst);
   b7->callback(b7->diCB, 0);
 
   window->end();
