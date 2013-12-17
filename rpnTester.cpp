@@ -77,11 +77,8 @@ Fl_Window *window = new Fl_Window(600, 600);
   
   
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 64bfbe4eb8cd90fb01950c980defa1534c7f31dc
   EnterButton *b2 = new EnterButton(370, 300, 80,80 ,"Enter", stack, numLst);
      b2->callback(b2->enterCB, 0);
   /*
