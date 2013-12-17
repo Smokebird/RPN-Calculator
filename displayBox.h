@@ -28,8 +28,6 @@ class DisplayBox : public Fl_Box {
 
 
  DisplayBox(int X, int Y, int W, int H, char* label) : Fl_Box(X,Y,W,H, label){
-
-    
    
   }
 
@@ -37,8 +35,10 @@ class DisplayBox : public Fl_Box {
     //Do something to display the top of the stack in the display box.
     
     // string  str= to_string(float);
+
     long double fl = x;
     this->copy_label(to_string(fl).c_str());
+
   }
   
 /*

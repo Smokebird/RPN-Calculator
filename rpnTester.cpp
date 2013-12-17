@@ -10,12 +10,14 @@
 
 
 #include"subtractButton.h"
+
 #include"sqrRoot.h"
 #include"expoButton.h"
 #include"plusMinusButton.h"
 #include"divide.h"
 #include"plus.h"
 #include"multiply.h"
+
 #include"operandButton.h"
 #include"enterButton.h"
 #include"dropbutton.h"
@@ -31,7 +33,9 @@ using namespace std;
 int main(int argc, char *argv[]){
   //Fl_Window *window=new Fl_Window(600,600, "Hello");
 Fl_Window *window = new Fl_Window(600, 600);
+
   DisplayBox *db = new DisplayBox(20,20,400,80,"0");
+
   Stack *stack = new Stack(db);
   string*numLst = new string;
   
@@ -77,11 +81,9 @@ Fl_Window *window = new Fl_Window(600, 600);
   OperandButton *ob0 = new OperandButton(190, 390, 80, 80,"&0", stack, numLst, db);
   ob0->callback(ob0->opCB,0);
 
+
   DecimalButton *ob10 = new DecimalButton(280, 390, 80, 80,"&.", stack, numLst, db);
   ob10->callback(ob10->opCB,0);
-
-  
-  
 
 
 
@@ -92,6 +94,7 @@ Fl_Window *window = new Fl_Window(600, 600);
   drop->callback(drop->dropCB, 0);
 
   Fl_Button *b3 = new Fl_Button(500,60, 80, 25, "E&xit");
+
   b3->callback(exitcb,0);
   
 
@@ -103,6 +106,7 @@ Fl_Window *window = new Fl_Window(600, 600);
   
   multiplyButton *b6 = new multiplyButton (460, 210, 80, 80, "&*", stack, numLst);
   b6->callback(b6->muCB, 0);
+
 
   divideButton *b7 = new divideButton ( 460, 120, 80, 80, "&/", stack, numLst);
   b7->callback(b7->diCB, 0);

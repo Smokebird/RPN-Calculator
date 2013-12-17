@@ -10,20 +10,28 @@
 #include <cstdlib>
 #include <string>
 #include <sstream>
+
 #include <math.h>
+
 using namespace std;
 
 class sqrtButton : public Fl_Button {
 
+
    public:
    float from_string(const std::string &s) {
+
+
+
     stringstream ss(s);
     float result;
     ss >> result;
     return result;
   }
-  
+   
+   
    string *myStr;
+
   Stack *stack;
 
 
@@ -35,14 +43,17 @@ class sqrtButton : public Fl_Button {
   
   static void sqCB(Fl_Widget* s, void*){
     float op1;
+
     //    float op2;
     sqrtButton *myButton = (sqrtButton *)s;
+
 
     if(!(*myButton->myStr).compare("") == 0){
       cout << "Empty String" << endl;
       float number = myButton->from_string(*myButton->myStr);
       myButton->stack->push(number);
     }
+
 
 
 
@@ -54,6 +65,7 @@ class sqrtButton : public Fl_Button {
     
     float res =sqrt(op1);
     
+
     myButton->stack->push(res);
     cout << "The number you pushed on the stack was : " << res << endl;
     (*myButton->myStr) = "";
