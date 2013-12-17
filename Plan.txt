@@ -28,3 +28,6 @@ Cuyler Vander Werker -> 218 - 251 -5315  02
 right now when you press a numberbutton, it puts it right on the stack, now allowing for two digit numbers. so, I think that a static char* should be added to the operandButton, and then when you click on the number, it will add the number character to the statjic char star. A press of an enter button would allow you to access the static variable and then add it to the stack.  
 
 So here is the deal. My current plan of having a float vector to hold the numbers before enter is pressed is not going to work. It doesn't handle decimals. 
+
+
+Monday 16th

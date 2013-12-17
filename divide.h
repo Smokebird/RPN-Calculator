@@ -33,11 +33,11 @@ class divideButton : public Fl_Button {
   static void diCB(Fl_Widget* d, void*){
     float op1;
     float op2;
-    float res = (op1/op2);
+    
     divideButton *myButton = (divideButton *)d;
     op2 = myButton->from_string(*myButton->myStr);
     op1 = myButton->stack->pop();
-   
+    float res = (op1/op2);
     myButton->stack->push(res);
     cout << "The number you pushed on the stack was : " << res << endl;
   }

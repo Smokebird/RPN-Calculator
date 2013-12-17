@@ -1,3 +1,4 @@
+
 //header file for plus button
 
 #ifndef PLUSBUTTON
@@ -12,7 +13,7 @@
 #include <sstream>
 using namespace std;
 
-class plusButton : public Fl_Button {
+class PlusButton : public Fl_Button {
 
  public:
   float from_string(const std::string &s) {
@@ -26,7 +27,7 @@ class plusButton : public Fl_Button {
   
 
 
- plusButton(int X, int Y, int W, int H, char* label, Stack *stack, string* str) : Fl_Button(X,Y,W,H, label){
+ PlusButton(int X, int Y, int W, int H, char* label, Stack *stack, string* str) : Fl_Button(X,Y,W,H, label){
     this->stack = stack;
     this->myStr = str;
   }
@@ -35,10 +36,11 @@ class plusButton : public Fl_Button {
   static void plCB(Fl_Widget* p, void*){
     float op1;
     float op2;
-    float res = (op1 + op2);
-    plusButton *myButton = (plusButton *)p;
+    
+    PlusButton *myButton = (PlusButton *)p;
     op2 = myButton->from_string(*myButton->myStr);
     op1 = myButton->stack->pop();
+    float res = (op1 + op2);
     myButton->stack->push(res);
     cout << "The number you pushed on the stack was : " << res << endl;
   }
