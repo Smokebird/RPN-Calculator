@@ -111,8 +111,9 @@ int main(int argc, char *argv[]){
 
   EnterButton *b2 = new EnterButton(295,410 , 80,170 ,"Enter", stack, numLst);
   >>>>>>> 0ddbf5cdb363067980233bc310911ce8caaf1412
+  */
   b2->callback(b2->enterCB, 0);
-*/
+
   Fl_Button *b3 = new Fl_Button(460,300, 80, 25, "E&xit");
   b3->callback(exitcb,0);
   
