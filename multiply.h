@@ -37,11 +37,20 @@ class multiplyButton : public Fl_Button {
     float op2;
     
     multiplyButton *myButton = (multiplyButton *)m;
-    op2 = myButton->from_string(*myButton->myStr);
+    if(!(*myButton->myStr).compare("") == 0){
+      std::cout << "Empty String" << std::endl;
+      float number = myButton->from_string(*myButton->myStr);
+      myButton->stack->push(number);
+    }
+
+    op2 = myButton->stack->pop();
     op1 = myButton->stack->pop();
+    cout << op1 << " - " << op2 << endl;
+
     float res = (op1*op2);
     myButton->stack->push(res);
     cout << "The number you pushed on the stack was : " << res << endl;
+    (*myButton->myStr) = "";
   }
 
 };
