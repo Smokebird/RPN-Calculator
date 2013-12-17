@@ -7,6 +7,7 @@
 #include<cstdlib>
 #include<string>
 #include<sstream>
+#include<iostream>
 using namespace std;
 
 class SubtractButton : public Fl_Button {
@@ -33,17 +34,22 @@ class SubtractButton : public Fl_Button {
     float op1;
     float op2;
     SubtractButton *myButton = (SubtractButton *)w;
+   
+    if(!(*myButton->myStr).compare("") == 0){
+      std::cout << "Empty String" << std::endl;
+      float number =  myButton->from_string(*myButton->myStr);
+      myButton->stack->push(number);    
+    }
     
-    float number =  myButton->from_string(*myButton->myStr);
-    zmyButton->stack->push(number);    
-
     op2 = myButton->stack->pop();
+   
     op1 = myButton->stack->pop();
-    
+    std::cout << op1 << " - " << op2 << std::endl; 
     
     myButton->stack->push(op1-op2);    
 
     cout <<"The number you pushed on the stack was : " << op1-op2 << endl;
+    (*myButton->myStr) = "";
   }
 };
 
